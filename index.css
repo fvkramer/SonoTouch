@@ -1,0 +1,22 @@
+#main-container {
+  display: flex
+}
+
+#keyboard-container ul{
+  width: 704px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+li {
+  list-style: none;
+  margin: 0 5px 0 5px;
+  width: 40px;
+  height: 40px;
+  background: #eee;
+}
+
+
+.space {
+    width: 680px;
+  }
