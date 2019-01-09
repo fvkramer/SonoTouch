@@ -1,22 +1,49 @@
+body {
+  padding-top: 5px;
+}
 #main-container {
   display: flex
 }
 
 #keyboard-container ul{
-  width: 704px;
+  width: 735px;
   display: flex;
   flex-wrap: wrap;
 }
 
 li {
   list-style: none;
-  margin: 0 5px 0 5px;
+  margin: 0 5px 5px 5px;
   width: 40px;
   height: 40px;
   background: #eee;
 }
 
 
+.delete {
+  width: 70px;
+}
+
+.tab {
+  width: 70px;
+}
+
+.caps-lock {
+ width: 80px;
+}
+
+.return {
+  width: 80px;
+}
+
+.shift-1 {
+  width: 95px;
+}
+
+.shift-2 {
+  width: 115px;
+}
+
 .space {
-    width: 680px;
-  }
+  width: 720px;
+}
