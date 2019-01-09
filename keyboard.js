@@ -3,7 +3,7 @@ document.addEventListener('keydown', (key) => {
   switch (key.keyCode) {
     case 192:
       // `
-      console.log(192);
+      document.getElementById('`').classList.add('on');
       break;
     case 49:
       // 1
@@ -207,7 +207,7 @@ document.addEventListener('keydown', (key) => {
       break;
     case 32:
     // space
-      document.getElementById('Shift-2').classList.add('on');
+      document.getElementById(' ').classList.add('on');
       break;
     default:
       break;
