@@ -19,6 +19,10 @@ li {
   background: #eee;
 }
 
+.on {
+  background-color: orange;
+}
+
 .delete {
   width: 70px;
 }

@@ -7,6 +7,7 @@ document.addEventListener('keydown', (key) => {
       break;
     case 49:
       // 1
+      document.getElementById('1').classList.add('on');
       break;
     case 50:
       // 2
@@ -161,4 +162,9 @@ document.addEventListener('keydown', (key) => {
     default:
       break;
   }
+});
+
+
+document.addEventListener('keyup', (e) => {
+  document.getElementById(e.key).classList.remove('on');
 });
