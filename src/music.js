@@ -1,3 +1,5 @@
+
+
 const frequencyData = new Uint8Array(200);
 
 const createFrequency = (analyser) => {
