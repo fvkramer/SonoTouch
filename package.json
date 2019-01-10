@@ -1,0 +1,24 @@
+{
+  "name": "SonoTouch",
+  "version": "1.0.0",
+  "description": "SonoTouch is a music creation and visualization application centered around a user's keyboard input. Each keyboard key is associated with a different sound frequency and when a user presses a button, a visual and auditory representation of the pitch is rendered on scren. Users can combine keys in different durations and combinations to create their own unique music with just the touch of their keyboard!",
+  "main": "boombox.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fvkramer/SonoTouch.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fvkramer/SonoTouch/issues"
+  },
+  "homepage": "https://github.com/fvkramer/SonoTouch#readme",
+  "devDependencies": {
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
+  }
+}
