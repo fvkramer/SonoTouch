@@ -1,3 +1,23 @@
+const createAudio = (audioId) => {
+  // create audio ctx
+  const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+  // get audioElement
+  const audioElement = document.getElementById(audioId);
+
+  // turn audioElement into MediaElementAudioSourceNode to manipulate its data
+  const audioSrc = audioCtx.createMediaElementSource(audioElement);
+
+  // creates analyser node
+  const analyser = audioCtx.createAnalyser();
+
+  // connects output of audio element to input of analyser
+  audioSrc.connect(analyser);
+
+  // then connects to audioCtx.destination (our speakers)
+  audioSrc.connect(audioCtx.destination);
+};
+
 document.addEventListener('keydown', (key) => {
   console.log(key.keyCode);
   switch (key.keyCode) {
@@ -8,6 +28,8 @@ document.addEventListener('keydown', (key) => {
     case 49:
       // 1
       document.getElementById('1').classList.add('on');
+      createAudio('audioElement-1');
+
       break;
     case 50:
       // 2
