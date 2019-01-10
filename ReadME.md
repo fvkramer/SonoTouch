@@ -22,6 +22,12 @@
   - Web Audio API
     - Create an audio event for each pitch frequency. Map the frequency data to D3.js visualization
 
+
+# Wireframe
+
+
+![wireframe](wireframe.png)
+
 # Implementation Timeline
 
   Day 1
