@@ -1,6 +1,10 @@
 body {
   padding-top: 50px;
-  text-align: center;
+  /* text-align: center; */
+}
+
+.audio-controls {
+  float: left;
 }
 
 h1 {

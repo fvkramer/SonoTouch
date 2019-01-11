@@ -2,7 +2,6 @@ import createAudio from './music';
 
 document.addEventListener('keydown', (key) => {
   console.log(key.keyCode);
-  // debugger;
   switch (key.keyCode) {
     case 192:
       // `
