@@ -1,5 +1,11 @@
 import createAudio from './music';
 
+const receiveElement = (number) => {
+  const audioString = `audioElement-${number}`;
+  document.getElementById(audioString).play();
+  createAudio(audioString);
+};
+
 document.addEventListener('keydown', (key) => {
   console.log(key.keyCode);
   switch (key.keyCode) {
@@ -8,12 +14,10 @@ document.addEventListener('keydown', (key) => {
       document.getElementById('`').classList.add('on');
       break;
     case 49:
-      // 1
-      console.log('in 1');
       document.getElementById('1').classList.add('on');
-      document.getElementById('audioElement-1').play();
-      createAudio('audioElement-1');
-      // setTimeout(() => document.getElementById('audioElement-1').play(), 2000);
+      receiveElement(1);
+      // document.getElementById('audioElement-1').play();
+      // createAudio('audioElement-1');
       break;
     case 50:
       // 2
