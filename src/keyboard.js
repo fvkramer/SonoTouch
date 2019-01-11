@@ -2,6 +2,7 @@ import createAudio from './music';
 
 document.addEventListener('keydown', (key) => {
   console.log(key.keyCode);
+  debugger;
   switch (key.keyCode) {
     case 192:
       // `
@@ -9,6 +10,7 @@ document.addEventListener('keydown', (key) => {
       break;
     case 49:
       // 1
+      console.log('in 1');
       document.getElementById('1').classList.add('on');
       document.getElementById('audioElement-1').play();
       createAudio('audioElement-1');

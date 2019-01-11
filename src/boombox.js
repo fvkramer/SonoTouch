@@ -4,24 +4,26 @@ const svgWidth = 900;
 // two div elements
 
 // const boomBoxes = d3.selectAll('.boom-box');
+const boomBox = d3.select('.boom-box');
+
+const svg = boomBox.append('svg').attr({
+  height: svgHeight,
+  width: svgWidth,
+});
+
 const createBoomBox = (frequencyData) => {
-  const boomBox = d3.select('.boom-box');
+  console.log(d3);
 
-  const svg = boomBox.append('svg').attr({
-    height: svgHeight,
-    width: svgWidth,
-  });
 
-  const rangeScale = d3.scale.linear()
+  const rangeScale = d3.scaleLinear()
     .domain([0, d3.max(frequencyData)])
     .range([0, svgHeight]);
 
-  const hslScale = d3.scale.linear()
+  const hslScale = d3.scaleLinear()
     .domain([0, d3.max(frequencyData)])
     .range([0, 360]);
 
-  debugger;
-  const circle = svg.select('circle')
+  const circle = svg.selectAll('circle')
     .data(frequencyData)
     .enter()
     .append('circle')
