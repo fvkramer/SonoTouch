@@ -1,9 +1,15 @@
 body {
   padding-top: 50px;
+  text-align: center;
 }
+
+h1 {
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+
 #main-container {
-  display: flex;
-  
+  display: flex; 
 }
 
 #keyboard-container {

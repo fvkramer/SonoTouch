@@ -1,1 +1,125 @@
-!function(e){var t={};function a(d){if(t[d])return t[d].exports;var n=t[d]={i:d,l:!1,exports:{}};return e[d].call(n.exports,n,n.exports,a),n.l=!0,n.exports}a.m=e,a.c=t,a.d=function(e,t,d){a.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:d})},a.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},a.t=function(e,t){if(1&t&&(e=a(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var d=Object.create(null);if(a.r(d),Object.defineProperty(d,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var n in e)a.d(d,n,function(t){return e[t]}.bind(null,n));return d},a.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return a.d(t,"a",t),t},a.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},a.p="",a(a.s=0)}([function(e,t,a){"use strict";a.r(t);const d=d3.selectAll(".boom-box").append("svg").attr("height",600).attr("width",900);var n=e=>{const t=d3.scaleLinear().domain([0,d3.max(e)]).range([0,600]),a=d3.scaleLinear().domain([0,d3.max(e)]).range([0,360]);d.selectAll("circle").data(e).enter().append("circle").attr("r",e=>t(e)).attr("cx",450).attr("cy",300).attr("fill","none").attr("stroke-width",4).attr("stroke-opacity",1).attr("stroke",e=>d3.hsl(a(e),1,.5)).exit()};const s=new Uint8Array(200),c=e=>{requestAnimationFrame(()=>c(e)),e.getByteFrequencyData(s),n(s)};var o=e=>{console.log("in audio");const t=new(window.AudioContext||window.webkitAudioContext),a=document.getElementById(e),d=t.createMediaElementSource(a),n=t.createAnalyser();d.connect(n),d.connect(t.destination),c(n)};document.addEventListener("keydown",e=>{switch(console.log(e.keyCode),e.keyCode){case 192:document.getElementById("`").classList.add("on");break;case 49:console.log("in 1"),document.getElementById("1").classList.add("on"),document.getElementById("audioElement-1").play(),o("audioElement-1");break;case 50:document.getElementById("2").classList.add("on");break;case 51:document.getElementById("3").classList.add("on");break;case 52:document.getElementById("4").classList.add("on");break;case 53:document.getElementById("5").classList.add("on");break;case 54:document.getElementById("6").classList.add("on");break;case 55:document.getElementById("7").classList.add("on");break;case 56:document.getElementById("8").classList.add("on");break;case 57:document.getElementById("9").classList.add("on");break;case 48:document.getElementById("0").classList.add("on");break;case 189:document.getElementById("-").classList.add("on");break;case 187:document.getElementById("=").classList.add("on");break;case 8:document.getElementById("Backspace").classList.add("on");break;case 9:break;case 81:document.getElementById("q").classList.add("on");break;case 87:document.getElementById("w").classList.add("on");break;case 69:document.getElementById("e").classList.add("on");break;case 82:document.getElementById("r").classList.add("on");break;case 84:document.getElementById("t").classList.add("on");break;case 89:document.getElementById("y").classList.add("on");break;case 85:document.getElementById("u").classList.add("on");break;case 73:document.getElementById("i").classList.add("on");break;case 79:document.getElementById("o").classList.add("on");break;case 80:document.getElementById("p").classList.add("on");break;case 219:document.getElementById("[").classList.add("on");break;case 221:document.getElementById("]").classList.add("on");break;case 20:document.getElementById("\\").classList.add("on"),document.getElementById("Capslock").classList.add("on");break;case 65:document.getElementById("a").classList.add("on");break;case 83:document.getElementById("s").classList.add("on");break;case 68:document.getElementById("d").classList.add("on");break;case 70:document.getElementById("f").classList.add("on");break;case 71:document.getElementById("g").classList.add("on");break;case 72:document.getElementById("h").classList.add("on");break;case 74:document.getElementById("j").classList.add("on");break;case 75:document.getElementById("k").classList.add("on");break;case 76:document.getElementById("l").classList.add("on");break;case 186:document.getElementById(";").classList.add("on");break;case 222:document.getElementById("'").classList.add("on");break;case 13:document.getElementById("Enter").classList.add("on");break;case 16:document.getElementById("Shift-1").classList.add("on");break;case 90:document.getElementById("z").classList.add("on");break;case 88:document.getElementById("x").classList.add("on");break;case 67:document.getElementById("c").classList.add("on");break;case 86:document.getElementById("v").classList.add("on");break;case 66:document.getElementById("b").classList.add("on");break;case 78:document.getElementById("n").classList.add("on");break;case 77:document.getElementById("m").classList.add("on");break;case 188:document.getElementById(",").classList.add("on");break;case 190:document.getElementById(".").classList.add("on");break;case 191:document.getElementById("/").classList.add("on");break;case 32:document.getElementById(" ").classList.add("on")}}),document.addEventListener("keyup",e=>{document.getElementById(e.key).classList.remove("on")})}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/keyboard.js");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./src/boombox.js":
+/*!************************!*\
+  !*** ./src/boombox.js ***!
+  \************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nconst svgHeight = 200;\nconst svgWidth = 200;\n\n// two div elements\n\n// const boomBoxes = d3.selectAll('.boom-box');\nconst boomBox = d3.selectAll('.boom-box');\n\nconst svg = boomBox.append('svg')\n  .attr('height', svgHeight)\n  .attr('width', svgWidth);\n\nconst createBoomBox = (frequencyData) => {\n  // debugger;\n  const rangeScale = d3.scaleLinear()\n    .domain([0, d3.max(frequencyData)])\n    .range([0, svgHeight]);\n\n  const hslScale = d3.scaleLinear()\n    .domain([0, d3.max(frequencyData)])\n    .range([0, 360]);\n\n  svg.selectAll('circle')\n    .data(frequencyData)\n    .enter()\n    .append('circle')\n    .attr('r', d => rangeScale(d))\n    .attr('cx', svgWidth / 2)\n    .attr('cy', svgHeight / 2)\n    .attr('fill', 'none')\n    .attr('stroke-width', 4)\n    .attr('stroke-opacity', 1)\n    .attr('stroke', d => d3.hsl(hslScale(d), 1, 0.5))\n    .exit();\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (createBoomBox);\n\n\n//# sourceURL=webpack:///./src/boombox.js?");
+
+/***/ }),
+
+/***/ "./src/keyboard.js":
+/*!*************************!*\
+  !*** ./src/keyboard.js ***!
+  \*************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _music__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./music */ \"./src/music.js\");\n\n\ndocument.addEventListener('keydown', (key) => {\n  console.log(key.keyCode);\n  // debugger;\n  switch (key.keyCode) {\n    case 192:\n      // `\n      document.getElementById('`').classList.add('on');\n      break;\n    case 49:\n      // 1\n      console.log('in 1');\n      document.getElementById('1').classList.add('on');\n      document.getElementById('audioElement-1').play();\n      Object(_music__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('audioElement-1');\n      // setTimeout(() => document.getElementById('audioElement-1').play(), 2000);\n      break;\n    case 50:\n      // 2\n      document.getElementById('2').classList.add('on');\n      break;\n    case 51:\n      // 3\n      document.getElementById('3').classList.add('on');\n      break;\n    case 52:\n      // 4\n      document.getElementById('4').classList.add('on');\n      break;\n    case 53:\n      // 5\n      document.getElementById('5').classList.add('on');\n      break;\n    case 54:\n      // 6\n      document.getElementById('6').classList.add('on');\n      break;\n    case 55:\n      // 7\n      document.getElementById('7').classList.add('on');\n      break;\n    case 56:\n      // 8\n      document.getElementById('8').classList.add('on');\n      break;\n    case 57:\n      // 9\n      document.getElementById('9').classList.add('on');\n      break;\n    case 48:\n      // 0\n      document.getElementById('0').classList.add('on');\n      break;\n    case 189:\n      //-\n      document.getElementById('-').classList.add('on');\n      break;\n    case 187:\n    // =\n      document.getElementById('=').classList.add('on');\n      break;\n    case 8:\n      // delete\n      document.getElementById('Backspace').classList.add('on');\n      break;\n    case 9:\n      // tab\n      break;\n    case 81:\n      // q\n      document.getElementById('q').classList.add('on');\n      break;\n    case 87:\n      // w\n      document.getElementById('w').classList.add('on');\n      break;\n    case 69:\n      // e\n      document.getElementById('e').classList.add('on');\n      break;\n    case 82:\n      // r\n      document.getElementById('r').classList.add('on');\n      break;\n    case 84:\n      // t\n      document.getElementById('t').classList.add('on');\n      break;\n    case 89:\n      // y\n      document.getElementById('y').classList.add('on');\n      break;\n    case 85:\n      // u\n      document.getElementById('u').classList.add('on');\n      break;\n    case 73:\n      // i\n      document.getElementById('i').classList.add('on');\n      break;\n    case 79:\n      // o\n      document.getElementById('o').classList.add('on');\n      break;\n    case 80:\n      // p\n      document.getElementById('p').classList.add('on');\n      break;\n    case 219:\n      // [\n      document.getElementById('[').classList.add('on');\n      break;\n    case 221:\n      // ]\n      document.getElementById(']').classList.add('on');\n      break;\n    case 20:\n      // caps lock\n      document.getElementById('\\\\').classList.add('on');\n      document.getElementById('Capslock').classList.add('on');\n      break;\n    case 65:\n      // a\n      document.getElementById('a').classList.add('on');\n      break;\n    case 83:\n      // s\n      document.getElementById('s').classList.add('on');\n      break;\n    case 68:\n      // d\n      document.getElementById('d').classList.add('on');\n      break;\n    case 70:\n      // f\n      document.getElementById('f').classList.add('on');\n      break;\n    case 71:\n      // g\n      document.getElementById('g').classList.add('on');\n      break;\n    case 72:\n      // h\n      document.getElementById('h').classList.add('on');\n      break;\n    case 74:\n      // j\n      document.getElementById('j').classList.add('on');\n      break;\n    case 75:\n      // k\n      document.getElementById('k').classList.add('on');\n      break;\n    case 76:\n      // l\n      document.getElementById('l').classList.add('on');\n      break;\n    case 186:\n    // ;\n      document.getElementById(';').classList.add('on');\n      break;\n    case 222:\n    // '\n      document.getElementById('\\'').classList.add('on');\n      break;\n    case 13:\n    // return\n      document.getElementById('Enter').classList.add('on');\n      break;\n    case 16:\n    // shift\n      document.getElementById('Shift-1').classList.add('on');\n      break;\n    case 90:\n    // z\n      document.getElementById('z').classList.add('on');\n      break;\n    case 88:\n    // x\n      document.getElementById('x').classList.add('on');\n      break;\n    case 67:\n    // c\n      document.getElementById('c').classList.add('on');\n      break;\n    case 86:\n    // v\n      document.getElementById('v').classList.add('on');\n      break;\n    case 66:\n    // b\n      document.getElementById('b').classList.add('on');\n      break;\n    case 78:\n    // n\n      document.getElementById('n').classList.add('on');\n      break;\n    case 77:\n    // m\n      document.getElementById('m').classList.add('on');\n      break;\n    case 188:\n    // ,\n      document.getElementById(',').classList.add('on');\n      break;\n    case 190:\n    // .\n      document.getElementById('.').classList.add('on');\n      break;\n    case 191:\n    //  /\n      document.getElementById('/').classList.add('on');\n      break;\n    case 32:\n    // space\n      document.getElementById(' ').classList.add('on');\n      break;\n    default:\n      break;\n  }\n});\n\n\ndocument.addEventListener('keyup', (e) => {\n  // console.log(e);\n  document.getElementById(e.key).classList.remove('on');\n});\n\n\n//# sourceURL=webpack:///./src/keyboard.js?");
+
+/***/ }),
+
+/***/ "./src/music.js":
+/*!**********************!*\
+  !*** ./src/music.js ***!
+  \**********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _boombox__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./boombox */ \"./src/boombox.js\");\n\n\nconst frequencyData = new Uint8Array(200);\n\nconst createFrequency = (analyser) => {\n  requestAnimationFrame(() => createFrequency(analyser));\n  // Copy frequency data to frequencyData array\n  analyser.getByteFrequencyData(frequencyData);\n  Object(_boombox__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(frequencyData);\n};\n\nconst createAudio = (audioId) => {\n  // create audio ctx\n  console.log('in audio');\n  const audioCtx = new (window.AudioContext || window.webkitAudioContext)();\n\n  // get audioElement\n  const audioElement = document.getElementById(audioId);\n\n  // turn audioElement into MediaElementAudioSourceNode to manipulate its data\n  const audioSrc = audioCtx.createMediaElementSource(audioElement);\n\n  // creates analyser node\n  const analyser = audioCtx.createAnalyser();\n\n  // connects output of audio element to input of analyser\n  audioSrc.connect(analyser);\n\n  // then connects to audioCtx.destination (our speakers)\n  audioSrc.connect(audioCtx.destination);\n\n  createFrequency(analyser);\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (createAudio);\n\n\n//# sourceURL=webpack:///./src/music.js?");
+
+/***/ })
+
+/******/ });

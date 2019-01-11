@@ -1,5 +1,5 @@
-const svgHeight = 600;
-const svgWidth = 900;
+const svgHeight = 200;
+const svgWidth = 200;
 
 // two div elements
 
@@ -11,7 +11,7 @@ const svg = boomBox.append('svg')
   .attr('width', svgWidth);
 
 const createBoomBox = (frequencyData) => {
-  debugger;
+  // debugger;
   const rangeScale = d3.scaleLinear()
     .domain([0, d3.max(frequencyData)])
     .range([0, svgHeight]);
