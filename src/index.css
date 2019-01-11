@@ -2,11 +2,17 @@ body {
   padding-top: 50px;
 }
 #main-container {
-  display: flex
+  display: flex;
+  
+}
+
+#keyboard-container {
+  perspective: 400px;
 }
 
 #keyboard-container ul{
   width: 735px;
+  transform: rotateX(20deg);
   display: flex;
   flex-wrap: wrap;
 }

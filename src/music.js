@@ -11,7 +11,7 @@ const createFrequency = (analyser) => {
 
 const createAudio = (audioId) => {
   // create audio ctx
-  console.log('in audip');
+  console.log('in audio');
   const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
   // get audioElement
