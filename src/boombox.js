@@ -4,17 +4,14 @@ const svgWidth = 900;
 // two div elements
 
 // const boomBoxes = d3.selectAll('.boom-box');
-const boomBox = d3.select('.boom-box');
+const boomBox = d3.selectAll('.boom-box');
 
-const svg = boomBox.append('svg').attr({
-  height: svgHeight,
-  width: svgWidth,
-});
+const svg = boomBox.append('svg')
+  .attr('height', svgHeight)
+  .attr('width', svgWidth);
 
 const createBoomBox = (frequencyData) => {
-  console.log(d3);
-
-
+  debugger;
   const rangeScale = d3.scaleLinear()
     .domain([0, d3.max(frequencyData)])
     .range([0, svgHeight]);
@@ -23,21 +20,18 @@ const createBoomBox = (frequencyData) => {
     .domain([0, d3.max(frequencyData)])
     .range([0, 360]);
 
-  const circle = svg.selectAll('circle')
+  svg.selectAll('circle')
     .data(frequencyData)
     .enter()
     .append('circle')
-    .attr({
-      r: d => rangeScale(d),
-      x: svgWidth / 2,
-      y: svgHeight / 2,
-      fill: 'none',
-      'stroke-width': 4,
-      'stroke-opacity': 1,
-      stroke: d => d3.hsl(hslScale(d), 1, 0.5),
-    });
-
-  circle.exit();
+    .attr('r', d => rangeScale(d))
+    .attr('cx', svgWidth / 2)
+    .attr('cy', svgHeight / 2)
+    .attr('fill', 'none')
+    .attr('stroke-width', 4)
+    .attr('stroke-opacity', 1)
+    .attr('stroke', d => d3.hsl(hslScale(d), 1, 0.5))
+    .exit();
 };
 
 export default createBoomBox;
