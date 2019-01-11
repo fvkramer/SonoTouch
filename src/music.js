@@ -1,13 +1,12 @@
-
+import createBoomBox from './boombox';
 
 const frequencyData = new Uint8Array(200);
 
 const createFrequency = (analyser) => {
   requestAnimationFrame(() => createFrequency(analyser));
-
   // Copy frequency data to frequencyData array
   analyser.getByteFrequencyData(frequencyData);
-  console.log(frequencyData);
+  createBoomBox(frequencyData);
 };
 
 const createAudio = (audioId) => {
