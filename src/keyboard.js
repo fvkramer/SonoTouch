@@ -7,7 +7,7 @@ const receiveElement = (number) => {
 };
 
 document.addEventListener('keydown', (key) => {
-  console.log(key.keyCode);
+  console.log('in music loop');
   switch (key.keyCode) {
     case 192:
       // `
@@ -79,6 +79,7 @@ document.addEventListener('keydown', (key) => {
       break;
     case 9:
       // tab
+      key.preventDefault();
       break;
     case 81:
       // q
@@ -142,6 +143,7 @@ document.addEventListener('keydown', (key) => {
       break;
     case 20:
       // caps lock
+      key.preventDefault();
       document.getElementById('\\').classList.add('on');
       document.getElementById('Capslock').classList.add('on');
       receiveElement(26);
@@ -203,11 +205,13 @@ document.addEventListener('keydown', (key) => {
       break;
     case 13:
     // return
+      key.preventDefault();
       document.getElementById('Enter').classList.add('on');
       receiveElement(38);
       break;
     case 16:
     // shift
+      key.preventDefault();
       document.getElementById('Shift-1').classList.add('on');
       receiveElement(39);
       break;
@@ -263,10 +267,7 @@ document.addEventListener('keydown', (key) => {
       break;
     case 32:
     // space
-      if (key.stopPropagation) {
-        key.stopPropagation();
-        key.preventDefault();
-      }
+      key.preventDefault();
       document.getElementById(' ').classList.add('on');
       receiveElement(50);
       break;
