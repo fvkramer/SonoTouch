@@ -1,8 +1,12 @@
 body {
   padding-top: 50px;
   height: 1000px;
+  background-color: hsl(120, 100%, 90%);
 }
 
+svg {
+  overflow: visible;
+}
 .audio-controls {
   float: left;
 }
@@ -33,7 +37,7 @@ li {
   margin: 0 5px 5px 5px;
   width: 40px;
   height: 40px;
-  background: #ccc;
+  background: rgb(237, 236, 236);
   box-shadow: 0em 0.5em 0 #a6a3a3;
   transition: all .1s linear;
 }

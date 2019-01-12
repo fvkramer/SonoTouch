@@ -1,5 +1,5 @@
-const svgHeight = 200;
-const svgWidth = 200;
+const svgHeight = 300;
+const svgWidth = 450;
 
 // two div elements
 
@@ -13,7 +13,7 @@ const svg = boomBox.append('svg')
 const createBoomBox = (frequencyData) => {
   const rangeScale = d3.scaleLinear()
     .domain([0, d3.max(frequencyData)])
-    .range([0, svgHeight]);
+    .range([0, svgHeight - 100]);
 
   const hslScale = d3.scaleLinear()
     .domain([0, d3.max(frequencyData)])
@@ -28,11 +28,12 @@ const createBoomBox = (frequencyData) => {
     .attr('cx', svgWidth / 2)
     .attr('cy', svgHeight / 2)
     .attr('fill', 'none')
-    .attr('stroke-width', 4)
+    .attr('stroke-width', 2)
     .attr('stroke-opacity', 1)
     .merge(circles)
     .attr('r', d => rangeScale(d))
-    .attr('stroke', d => d3.hsl(hslScale(d), 1, 0.5));
+    .attr('stroke', d => d3.hsl(hslScale(d), 1, 0.85));
+
   // svg.selectAll('circle')
   //   .data(frequencyData)
   //   .enter()
