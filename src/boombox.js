@@ -47,8 +47,9 @@ const createBoomBox = (frequencyData) => {
     .attr('x', 50)
     .attr('y', 50)
     .attr('width', 100)
-    .attr('height', 100)
-    .attr('fill', 'green');
+    .attr('height', 50)
+    .attr('fill', 'green')
+    .attr('transform', 'translate(150, 0)rotate(90)');
 
   // svg.selectAll('circle')
   //   .data(frequencyData)
