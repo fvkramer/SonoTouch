@@ -5,10 +5,16 @@ const svgWidth = 450;
 
 // const boomBoxes = d3.selectAll('.boom-box');
 const boomBox = d3.selectAll('.boom-box');
+const monitor = d3.select('#monitor');
 
 const svg = boomBox.append('svg')
   .attr('height', svgHeight)
   .attr('width', svgWidth);
+
+
+const svgMonitor = monitor.append('svg')
+  .attr('height', 400)
+  .attr('width', 600);
 
 const createBoomBox = (frequencyData) => {
   const rangeScale = d3.scaleLinear()
@@ -18,7 +24,6 @@ const createBoomBox = (frequencyData) => {
   const hslScale = d3.scaleLinear()
     .domain([0, d3.max(frequencyData)])
     .range([0, 360]);
-
 
   const circles = svg.selectAll('circle')
     .data(frequencyData);
@@ -33,6 +38,17 @@ const createBoomBox = (frequencyData) => {
     .merge(circles)
     .attr('r', d => rangeScale(d))
     .attr('stroke', d => d3.hsl(hslScale(d), 1, 0.85));
+
+  const rects = svgMonitor.selectAll('rect')
+    .data(frequencyData);
+  rects.exit().remove();
+  rects.enter()
+    .append('rect')
+    .attr('x', 50)
+    .attr('y', 50)
+    .attr('width', 100)
+    .attr('height', 100)
+    .attr('fill', 'green');
 
   // svg.selectAll('circle')
   //   .data(frequencyData)

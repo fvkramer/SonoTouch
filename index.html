@@ -18,7 +18,7 @@
       <!-- record -->
       <div>
         Record
-        <svg version="1.0" width="10pt" height="12pt" viewBox="0 0 655.000000 1280.000000" preserveAspectRatio="xMidYMid meet">
+        <svg id="record" version="1.0" width="10pt" height="12pt" viewBox="0 0 655.000000 1280.000000" preserveAspectRatio="xMidYMid meet">
           <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
             <path d="M3080 12714 c-443 -55 -837 -253 -1146 -577 -302 -316 -494 -735 -544 -1182 -8 -71 -10 -875 -8 -2805 l3 -2705 22 -110 c120 -597 439 -1072 918 -1365 711 -437 1643 -325 2243 269 300 296 481 640 575 1096 21 100 21 111 24 2825 3 2433 2 2737 -12 2840 -118 859 -727 1528 -1540 1690 -86 18 -153 23 -305 25 -107 2 -211 1 -230 -1z" />
             <path d="M112 6962 c-29 -19 -32 -90 -32 -712 0 -860 13 -1067 84 -1377 216 -936 872 -1729 1765 -2133 235 -106 564 -207 789 -242 l82 -12 0 -518 0 -518 -790 0 -790 0 0 -690 0 -690 2055 0 2055 0 0 690 0 690 -790 0 -790 0 0 518 0 518 83 12 c45 7 146 28 223 47 1162 284 2067 1188 2330 2328 71 310 84 517 84 1377 0 622 -3 693 -32 712 -7 4 -223 8 -480 8 l-468 0 -14 -22 c-13 -20 -15 -140 -19 -808 -4 -849 -4 -851 -62 -1081 -183 -720 -756 -1302 -1490 -1512 -468 -134 -991 -113 -1435 58 -659 254 -1148 795 -1315 1454 -58 230 -58 232 -62 1081 -4 668 -6 788 -19 808 l-14 22 -468 0 c-257 0 -473 -4 -480 -8z" />
@@ -37,7 +37,7 @@
             <path d="M45.563,29.174l-22-15c-0.307-0.208-0.703-0.231-1.031-0.058C22.205,14.289,22,14.629,22,15v30   c0,0.371,0.205,0.711,0.533,0.884C22.679,45.962,22.84,46,23,46c0.197,0,0.394-0.059,0.563-0.174l22-15   C45.836,30.64,46,30.331,46,30S45.836,29.36,45.563,29.174z M24,43.107V16.893L43.225,30L24,43.107z" />
             <path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30   S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z" />
           </g>
-        </svg>
+        </svg> 
       </div>
     </div>
   </section>
@@ -45,75 +45,80 @@
   <section id="main-container">
     <div class="boom-box">
     </div>
-    <div id="keyboard-container">
-      <ul id="keyboard">
-        <!-- first row -->
-        <li class="symbol-number-letter" id="`"><span class="off">`</span></li>
-        <li class="symbol-number-letter" id="1" ><span class="off">1</span></li>
-        <li class="symbol-number-letter" id="2"><span class="off">2</span></li>
-        <li class="symbol-number-letter" id="3"><span class="off">3</span></li>
-        <li class="symbol-number-letter" id="4"><span class="off">4</span></li>
-        <li class="symbol-number-letter" id="5"><span class="off">5</span></li>
-        <li class="symbol-number-letter" id="6"><span class="off">6</span></li>
-        <li class="symbol-number-letter" id="7"><span class="off">7</span></li>
-        <li class="symbol-number-letter" id="8"><span class="off">8</span></li>
-        <li class="symbol-number-letter" id="9"><span class="off">9</span></li>
-        <li class="symbol-number-letter" id="0"><span class="off">0</span></li>
-        <li class="symbol-number-letter" id="-"><span class="off">-</span></li>
-        <li class="symbol-number-letter" id="="><span class="off">=</span></li>
-        <li class="delete" id="Backspace"><span class="off">delete</span></li>
+
+    <div class="computer">
+      <div id="monitor">
+        
+      </div>
+      <div id="keyboard-container">
+        <ul id="keyboard">
+          <!-- first row -->
+          <li class="symbol-number-letter" id="`"><span class="off">`</span></li>
+          <li class="symbol-number-letter" id="1"><span class="off">1</span></li>
+          <li class="symbol-number-letter" id="2"><span class="off">2</span></li>
+          <li class="symbol-number-letter" id="3"><span class="off">3</span></li>
+          <li class="symbol-number-letter" id="4"><span class="off">4</span></li>
+          <li class="symbol-number-letter" id="5"><span class="off">5</span></li>
+          <li class="symbol-number-letter" id="6"><span class="off">6</span></li>
+          <li class="symbol-number-letter" id="7"><span class="off">7</span></li>
+          <li class="symbol-number-letter" id="8"><span class="off">8</span></li>
+          <li class="symbol-number-letter" id="9"><span class="off">9</span></li>
+          <li class="symbol-number-letter" id="0"><span class="off">0</span></li>
+          <li class="symbol-number-letter" id="-"><span class="off">-</span></li>
+          <li class="symbol-number-letter" id="="><span class="off">=</span></li>
+          <li class="delete" id="Backspace"><span class="off">delete</span></li>
       
       
-        <!-- second row -->
-        <li class="tab"><span class="off">tab</span></li>
-        <li class="symbol-number-letter" id="q"><span class="off">Q</span></li>
-        <li class="symbol-number-letter" id="w"><span class="off">W</span></li>
-        <li class="symbol-number-letter" id="e"><span class="off">E</span></li>
-        <li class="symbol-number-letter" id="r"><span class="off">R</span></li>
-        <li class="symbol-number-letter" id="t"><span class="off">T</span></li>
-        <li class="symbol-number-letter" id="y"><span class="off">Y</span></li>
-        <li class="symbol-number-letter" id="u"><span class="off">U</span></li>
-        <li class="symbol-number-letter" id="i"><span class="off">I</span></li>
-        <li class="symbol-number-letter" id="o"><span class="off">O</span></li>
-        <li class="symbol-number-letter" id="p"><span class="off">P</span></li>
-        <li class="symbol-number-letter" id="["><span class="off">[</span></li>
-        <li class="symbol-number-letter" id="]"><span class="off">]</span></li>
-        <li class="symbol-number-letter" id="\"><span class="off">\</span></li>
+          <!-- second row -->
+          <li class="tab"><span class="off">tab</span></li>
+          <li class="symbol-number-letter" id="q"><span class="off">Q</span></li>
+          <li class="symbol-number-letter" id="w"><span class="off">W</span></li>
+          <li class="symbol-number-letter" id="e"><span class="off">E</span></li>
+          <li class="symbol-number-letter" id="r"><span class="off">R</span></li>
+          <li class="symbol-number-letter" id="t"><span class="off">T</span></li>
+          <li class="symbol-number-letter" id="y"><span class="off">Y</span></li>
+          <li class="symbol-number-letter" id="u"><span class="off">U</span></li>
+          <li class="symbol-number-letter" id="i"><span class="off">I</span></li>
+          <li class="symbol-number-letter" id="o"><span class="off">O</span></li>
+          <li class="symbol-number-letter" id="p"><span class="off">P</span></li>
+          <li class="symbol-number-letter" id="["><span class="off">[</span></li>
+          <li class="symbol-number-letter" id="]"><span class="off">]</span></li>
+          <li class="symbol-number-letter" id="\"><span class="off">\</span></li>
       
-        <!-- third row -->
-        <li class="caps-lock" id=""><span class="off">caps lock</span></li>
-        <li class="symbol-number-letter" id="a"><span class="off">A</span></li>
-        <li class="symbol-number-letter" id="s"><span class="off">S</span></li>
-        <li class="symbol-number-letter" id="d"><span class="off">D</span></li>
-        <li class="symbol-number-letter" id="f"><span class="off">F</span></li>
-        <li class="symbol-number-letter" id="g"><span class="off">G</span></li>
-        <li class="symbol-number-letter" id="h"><span class="off">H</span></li>
-        <li class="symbol-number-letter" id="j"><span class="off">J</span></li>
-        <li class="symbol-number-letter" id="k"><span class="off">K</span></li>
-        <li class="symbol-number-letter" id="l"><span class="off">L</span></li>
-        <li class="symbol-number-letter" id=";"><span class="off">;</span></li>
-        <li class="symbol-number-letter" id=""><span class="off">'</span></li>
-        <li class="return" id="Enter"><span class="off">return</span></li>
+          <!-- third row -->
+          <li class="caps-lock" id=""><span class="off">caps lock</span></li>
+          <li class="symbol-number-letter" id="a"><span class="off">A</span></li>
+          <li class="symbol-number-letter" id="s"><span class="off">S</span></li>
+          <li class="symbol-number-letter" id="d"><span class="off">D</span></li>
+          <li class="symbol-number-letter" id="f"><span class="off">F</span></li>
+          <li class="symbol-number-letter" id="g"><span class="off">G</span></li>
+          <li class="symbol-number-letter" id="h"><span class="off">H</span></li>
+          <li class="symbol-number-letter" id="j"><span class="off">J</span></li>
+          <li class="symbol-number-letter" id="k"><span class="off">K</span></li>
+          <li class="symbol-number-letter" id="l"><span class="off">L</span></li>
+          <li class="symbol-number-letter" id=";"><span class="off">;</span></li>
+          <li class="symbol-number-letter" id=""><span class="off">'</span></li>
+          <li class="return" id="Enter"><span class="off">return</span></li>
       
-        <!-- fourth row -->
-        <li class="shift-1" id="Shift-1"><span class="off">shift</span></li>
-        <li class="symbol-number-letter" id="z"><span class="off">Z</span></li>
-        <li class="symbol-number-letter" id="x"><span class="off">X</span></li>
-        <li class="symbol-number-letter" id="c"><span class="off">C</span></li>
-        <li class="symbol-number-letter" id="v"><span class="off">V</span></li>
-        <li class="symbol-number-letter" id="b"><span class="off">B</span></li>
-        <li class="symbol-number-letter" id="n"><span class="off">N</span></li>
-        <li class="symbol-number-letter" id="m"><span class="off">M</span></li>
-        <li class="symbol-number-letter" id=","><span class="off">,</span></li>
-        <li class="symbol-number-letter" id="."><span class="off">.</span></li>
-        <li class="symbol-number-letter" id="/"><span class="off">?</span></li>
-        <li class="shift-2" id="Shift-2"><span class="off">shift</span></li>
+          <!-- fourth row -->
+          <li class="shift-1" id="Shift-1"><span class="off">shift</span></li>
+          <li class="symbol-number-letter" id="z"><span class="off">Z</span></li>
+          <li class="symbol-number-letter" id="x"><span class="off">X</span></li>
+          <li class="symbol-number-letter" id="c"><span class="off">C</span></li>
+          <li class="symbol-number-letter" id="v"><span class="off">V</span></li>
+          <li class="symbol-number-letter" id="b"><span class="off">B</span></li>
+          <li class="symbol-number-letter" id="n"><span class="off">N</span></li>
+          <li class="symbol-number-letter" id="m"><span class="off">M</span></li>
+          <li class="symbol-number-letter" id=","><span class="off">,</span></li>
+          <li class="symbol-number-letter" id="."><span class="off">.</span></li>
+          <li class="symbol-number-letter" id="/"><span class="off">?</span></li>
+          <li class="shift-2" id="Shift-2"><span class="off">shift</span></li>
       
-        <!-- fifth row -->
-        <li class="space" id=" "><span class="off"></span></li>
-      </ul>
+          <!-- fifth row -->
+          <li class="space" id=" "><span class="off"></span></li>
+        </ul>
+      </div>
     </div>
-    
     <div class="boom-box">
     </div>
 

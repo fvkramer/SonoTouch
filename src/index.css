@@ -70,6 +70,14 @@ h1 {
   display: flex; 
 }
 
+#monitor {
+  width: 735px;
+  height: 400px;
+  background: #13fef394;
+  border: 16px solid white;
+  overflow: hidden;
+}
+
 #keyboard-container {
   perspective: 400px;
   padding-top: 40px;
