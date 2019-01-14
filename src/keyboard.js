@@ -1,5 +1,7 @@
 import createAudio from './music';
 
+let start = true;
+
 const receiveElement = (number) => {
   const audioString = `audioElement-${number}`;
   document.getElementById(audioString).play();
@@ -7,7 +9,12 @@ const receiveElement = (number) => {
 };
 
 document.addEventListener('keydown', (key) => {
-  console.log('in music loop');
+  if (start) {
+    const introText = document.getElementById('instructions');
+    introText.parentNode.removeChild(introText);
+    start = false;
+  }
+
   switch (key.keyCode) {
     case 192:
       // `

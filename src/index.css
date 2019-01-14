@@ -71,11 +71,18 @@ h1 {
 }
 
 #monitor {
+  position: relative;
   width: 735px;
   height: 400px;
   background: #13fef394;
   border: 16px solid white;
   overflow: hidden;
+}
+
+#instructions {
+  position: absolute;
+  top: 50%;
+  left: 39%;
 }
 
 #keyboard-container {
