@@ -43,16 +43,22 @@ const makeBoomBox = (frequencyData) => {
 
 
 const makeWaveForm = (frequencyData) => {
+  const max = d3.max(frequencyData);
+
   const rangeScale = d3.scaleLinear()
-    .domain([0, d3.max(frequencyData)])
+    .domain([0, max])
     .range([0, svgHeight - 100]);
 
   const waveLength = d3.scaleLinear()
-    .domain([0, d3.max(frequencyData)])
-    .range([0, monitorWidth]);
+    .domain([0, max])
+    .range([0, monitorWidth / 2]);
+
+  const waveLength2 = d3.scaleLinear()
+    .domain([0, max])
+    .range([monitorWidth / 2, monitorWidth]);
 
   const hslScale = d3.scaleLinear()
-    .domain([0, d3.max(frequencyData)])
+    .domain([0, max])
     .range([0, 360]);
 
   const rects = svgMonitor.selectAll('rect')
@@ -60,13 +66,22 @@ const makeWaveForm = (frequencyData) => {
   rects.remove();
   rects.enter()
     .append('rect')
-    .attr('x', 175)
+    .attr('x', d => 185 - Math.random() * d)
     .attr('y', d => -waveLength(d))
     .attr('width', d => rangeScale(d))
     .attr('height', 3)
     .attr('fill', d => d3.hsl(hslScale(d), 1, 0.85))
     .attr('transform', 'rotate(90)');
+  rects.enter()
+    .append('rect')
+    .attr('x', d => 185 - Math.random() * (max - d))
+    .attr('y', d => -waveLength2(d))
+    .attr('width', d => rangeScale(max - d))
+    .attr('height', 3)
+    .attr('fill', d => d3.hsl(hslScale(d), 1, 0.85))
+    .attr('transform', 'rotate(90)');
 };
+
 
 const createBoomBox = (frequencyData) => {
   makeBoomBox(frequencyData);
