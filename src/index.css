@@ -27,14 +27,13 @@ h1 {
 .sonotouch {
   position: relative;
   font-family: 'Permanent Marker', cursive;
-  font-variant:small-caps;
+  font-variant: small-caps;
   font-size: 180px;
   -webkit-transform: skew(-15deg,-15deg);
   padding-left: 80px;
   background-image: -webkit-linear-gradient(#FF0FF8 0%,  #F9F9F7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin: 0;
   -webkit-filter: drop-shadow(2px 2px 20px #f008b7);
 }
 
@@ -81,8 +80,11 @@ h1 {
 
 #instructions {
   position: absolute;
-  top: 50%;
-  left: 39%;
+  font-family: 'Permanent Marker';
+  font-size: 30px;
+  color: white;
+  top: 47%;
+  left: 24%;
 }
 
 #keyboard-container {
