@@ -24,47 +24,6 @@ h1 {
   font-family: 'Permanent Marker'
 }
 
-.sonotouch {
-  position: relative;
-  font-family: 'Permanent Marker', cursive;
-  font-variant: small-caps;
-  font-size: 180px;
-  -webkit-transform: skew(-15deg,-15deg);
-  padding-left: 80px;
-  background-image: -webkit-linear-gradient(#FF0FF8 0%,  #F9F9F7 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-filter: drop-shadow(2px 2px 20px #f008b7);
-}
-
-.sonotouch:before {
-  content: '-';
-  position: absolute;
-  bottom: -98px;
-  left: 254px;
-  background-image: -webkit-linear-gradient(#F3C8F3 0%, #F3C8F3 100%);
-  -webkit-background-clip: text;
-  text-shadow: 70px -7px #F3C8F3;
-}
-
-.sonotouch:after {
-  content: '-';
-  position: absolute;
-  bottom: -85px;
-  left: 395px;
-  background-image: -webkit-linear-gradient(#F3C8F3 0%, #F3C8F3 100%);
-  -webkit-background-clip: text;
-  text-shadow: 70px -5px #F3C8F3;
-}
-
-.sono-s {
-  position: relative;
-  background-image: -webkit-linear-gradient(#FF0FF8 0%,  #F9F9F7 100%);
-  -webkit-background-clip: text;
-  padding-right: 18px;
-  margin-right: -18px;
-}
-
 #main-container {
   display: flex; 
 }
@@ -90,6 +49,10 @@ h1 {
 #keyboard-container {
   perspective: 400px;
   padding-top: 40px;
+  width: 820px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: visible;
 }
 
 #keyboard-container ul{
@@ -109,6 +72,48 @@ li {
   box-shadow: 0em 0.5em 0 #aad9d2;
   transition: all .1s linear;
   color: white;
+}
+
+.sonotouch {
+  position: relative;
+  font-family: 'Permanent Marker', cursive;
+  font-variant: small-caps;
+  z-index: 1;
+  font-size: 100px;
+  -webkit-transform: skew(-15deg,-15deg);
+  padding-left: 80px;
+  background-image: -webkit-linear-gradient(#FF0FF8 0%,  #F9F9F7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-filter: drop-shadow(2px 2px 20px #f008b7);
+}
+
+.sonotouch:before {
+  content: '-';
+  position: absolute;
+  bottom: -56px;
+  left: 87px;
+  background-image: -webkit-linear-gradient(#F3C8F3 0%, #F3C8F3 100%);
+  -webkit-background-clip: text;
+  text-shadow: 70px -7px #F3C8F3;
+}
+
+.sonotouch:after {
+  content: '-';
+  position: absolute;
+  bottom: -52px;
+  left: 132px;
+  background-image: -webkit-linear-gradient(#F3C8F3 0%, #F3C8F3 100%);
+  -webkit-background-clip: text;
+  text-shadow: 70px -5px #F3C8F3;
+}
+
+.sono-s {
+  position: relative;
+  background-image: -webkit-linear-gradient(#FF0FF8 0%,  #F9F9F7 100%);
+  -webkit-background-clip: text;
+  padding-right: 18px;
+  margin-right: -18px;
 }
 
 .on {

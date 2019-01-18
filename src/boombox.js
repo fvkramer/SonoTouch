@@ -41,7 +41,6 @@ const makeBoomBox = (frequencyData) => {
     .attr('stroke', d => d3.hsl(hslScale(d), 1, 0.85));
 };
 
-
 const makeWaveForm = (frequencyData) => {
   const max = d3.max(frequencyData);
 
