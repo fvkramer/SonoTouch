@@ -40,11 +40,11 @@ h1 {
 
 #instructions {
   position: absolute;
-  font-family: 'Permanent Marker';
-  font-size: 16px;
-  color: white;
   top: 47%;
-  left: 24%;
+  left: 8%;
+  font-family: 'Permanent Marker';
+  font-size: 30px;
+  color: white;
 }
 
 #keyboard-container {
@@ -81,9 +81,9 @@ li {
   font-family: 'Permanent Marker', cursive;
   font-variant: small-caps;
   z-index: 1;
-  font-size: 100px;
+  font-size: 79px;
   -webkit-transform: skew(-15deg,-15deg);
-  padding-left: 80px;
+  padding-left: 5px;
   background-image: -webkit-linear-gradient(#FF0FF8 0%,  #F9F9F7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -93,8 +93,8 @@ li {
 .sonotouch:before {
   content: '-';
   position: absolute;
-  bottom: -56px;
-  left: 87px;
+  bottom: -34px;
+  left: 12px;
   background-image: -webkit-linear-gradient(#F3C8F3 0%, #F3C8F3 100%);
   -webkit-background-clip: text;
   text-shadow: 70px -7px #F3C8F3;
@@ -103,8 +103,8 @@ li {
 .sonotouch:after {
   content: '-';
   position: absolute;
-  bottom: -52px;
-  left: 132px;
+  bottom: -30px;
+  left: 48px;
   background-image: -webkit-linear-gradient(#F3C8F3 0%, #F3C8F3 100%);
   -webkit-background-clip: text;
   text-shadow: 70px -5px #F3C8F3;

@@ -83,7 +83,6 @@ const makeWaveForm = (frequencyData) => {
     .attr('transform', 'rotate(90)');
 };
 
-
 const createBoomBox = (frequencyData) => {
   makeBoomBox(frequencyData);
   makeWaveForm(frequencyData);
