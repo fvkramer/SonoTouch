@@ -2,7 +2,7 @@ body {
   padding-top: 50px;
   height: 100vh;
   background-color: black;
-  /* #9EEFE5; */
+  font-size: 12px;
 }
 
 svg {
@@ -26,21 +26,22 @@ h1 {
 
 #main-container {
   display: flex; 
+  justify-content: space-around;
 }
 
 #monitor {
   position: relative;
-  width: 735px;
-  height: 400px;
+  width: 470px;
+  height: 300px;
   background: #13fef394;
-  border: 16px solid white;
+  border: 8px solid white;
   overflow: hidden;
 }
 
 #instructions {
   position: absolute;
   font-family: 'Permanent Marker';
-  font-size: 30px;
+  font-size: 16px;
   color: white;
   top: 47%;
   left: 24%;
@@ -48,15 +49,15 @@ h1 {
 
 #keyboard-container {
   perspective: 400px;
-  padding-top: 40px;
-  width: 820px;
+  padding-top: 20px;
+  width: 500px;
   display: flex;
   flex-wrap: wrap;
   overflow: visible;
 }
 
 #keyboard-container ul{
-  width: 735px;
+  width: 500px;
   transform: rotateX(20deg);
   display: flex;
   flex-wrap: wrap;
@@ -65,11 +66,12 @@ h1 {
 li {
   list-style: none;
   text-align: center;
-  margin: 0 5px 5px 5px;
-  width: 40px;
-  height: 40px;
+  display: inline-block;
+  margin: 0 2px 2px 2px;
+  width: 30px;
+  height: 23px;
   background: #13fef394;
-  box-shadow: 0em 0.5em 0 #aad9d2;
+  box-shadow: 0em 0.3em 0 #aad9d2;
   transition: all .1s linear;
   color: white;
 }
@@ -122,29 +124,29 @@ li {
 }
 
 .delete {
-  width: 70px;
+  width: 45px;
 }
 
 .tab {
-  width: 70px;
+  width: 45px;
 }
 
 .caps-lock {
- width: 80px;
+ width: 50px;
 }
 
 .return {
-  width: 80px;
+  width: 60px;
 }
 
 .shift-1 {
-  width: 95px;
+  width: 67px;
 }
 
 .shift-2 {
-  width: 115px;
+  width: 78px;
 }
 
 .space {
-  width: 720px;
+  width: 490px;
 } 
