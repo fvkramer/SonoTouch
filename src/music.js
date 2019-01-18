@@ -1,6 +1,7 @@
 import createBoomBox from './boombox';
 
 const frequencyData = new Uint8Array(200);
+let audioSrc;
 
 const createFrequency = (analyser) => {
   // const frequencyData = new Uint8Array(200);
@@ -19,8 +20,9 @@ const createAudio = (audioId) => {
   const audioElement = document.getElementById(audioId);
 
   // turn audioElement into MediaElementAudioSourceNode to manipulate its data
-  const audioSrc = audioCtx.createMediaElementSource(audioElement) || window.audiosrc;
-  window.audioSrc = audioSrc;
+  if (audioSrc === undefined) {
+    audioSrc = audioCtx.createMediaElementSource(audioElement);
+  }
   // creates analyser node
   const analyser = audioCtx.createAnalyser();
 
