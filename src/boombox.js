@@ -5,15 +5,14 @@ const svgMHeight = 150;
 const svgMWidth = 275;
 
 const monitorWidth = 470;
-// two div elements
 
-// const boomBoxes = d3.selectAll('.boom-box');
 const boomBox = d3.selectAll('.boom-box');
 const monitor = d3.select('#monitor');
 
 const svg = boomBox.append('svg')
   .attr('height', svgHeight)
   .attr('width', svgWidth);
+
 
 const svgMonitor = monitor.append('svg')
   .attr('height', svgMHeight)
@@ -30,17 +29,17 @@ const makeBoomBox = (frequencyData) => {
 
   const circles = svg.selectAll('circle')
     .data(frequencyData);
-  circles.exit().remove();
-  circles.enter()
-    .append('circle')
+
+  circles.enter().append('circle')
+    .merge(circles)
     .attr('cx', svgWidth / 2)
     .attr('cy', svgHeight / 2)
     .attr('fill', 'none')
     .attr('stroke-width', 2)
     .attr('stroke-opacity', 1)
-    .merge(circles)
     .attr('r', d => rangeScale(d))
-    .attr('stroke', d => d3.hsl(hslScale(d), 1, 0.85));
+    .attr('stroke', d => d3.hsl(hslScale(d), 1, 0.85))
+    .exit();
 };
 
 const makeWaveForm = (frequencyData) => {
@@ -73,6 +72,7 @@ const makeWaveForm = (frequencyData) => {
     .attr('height', 3)
     .attr('fill', d => d3.hsl(hslScale(d), 1, 0.85))
     .attr('transform', 'rotate(90)');
+
   rects.enter()
     .append('rect')
     .attr('x', d => 150 - Math.random() * (max - d))

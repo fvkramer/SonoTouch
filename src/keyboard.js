@@ -285,6 +285,9 @@ document.addEventListener('keydown', (key) => {
 
 
 document.addEventListener('keyup', (e) => {
-  // console.log(e);
-  document.getElementById(e.key).classList.remove('on');
+  if (e.key === 'Shift') {
+    document.getElementById('Shift-1').classList.remove('on');
+  } else {
+    document.getElementById(e.key).classList.remove('on');
+  }
 });
