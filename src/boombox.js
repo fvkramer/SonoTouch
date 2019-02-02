@@ -30,6 +30,7 @@ const makeBoomBox = (frequencyData) => {
   const circles = svg.selectAll('circle')
     .data(frequencyData);
 
+  circles.exit().remove();
   circles.enter().append('circle')
     .merge(circles)
     .attr('cx', svgWidth / 2)
@@ -38,8 +39,7 @@ const makeBoomBox = (frequencyData) => {
     .attr('stroke-width', 2)
     .attr('stroke-opacity', 1)
     .attr('r', d => rangeScale(d))
-    .attr('stroke', d => d3.hsl(hslScale(d), 1, 0.85))
-    .exit();
+    .attr('stroke', d => d3.hsl(hslScale(d), 1, 0.85));
 };
 
 const makeWaveForm = (frequencyData) => {
